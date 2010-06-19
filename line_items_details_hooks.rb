@@ -1,5 +1,10 @@
 class LineItemsDetailsHooks < Spree::ThemeSupport::HookListener
   insert_after :product_price, 'details'
+
+  replace :order_details_line_items_headers, '/shared/order_details_line_items_headers'
+  replace :order_details_line_item_row, '/shared/order_details_line_item_row'
+
+  insert_after :cart_item_description, 'line_item_details'
   #
   # In this file you can modify the content of the hooks available in the default templates
   # and avoid overriding a template in many situations. Multiple extensions can modify the
