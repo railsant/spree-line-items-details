@@ -1,5 +1,5 @@
 class LineItemsDetailsHooks < Spree::ThemeSupport::HookListener
-
+  insert_after :product_price, 'details'
   #
   # In this file you can modify the content of the hooks available in the default templates
   # and avoid overriding a template in many situations. Multiple extensions can modify the
@@ -22,7 +22,7 @@ class LineItemsDetailsHooks < Spree::ThemeSupport::HookListener
   # or instance variables accessible in your views
   #
   # Examples
-  # 
+  #
   #   insert_before :homepage_products, :text => "<h1>Welcome!</h1>"
   #   insert_after :homepage_products, 'shared/offers' # renders a partial
   #   replace :taxon_sidebar_navigation, 'shared/my_sidebar
@@ -41,3 +41,4 @@ class LineItemsDetailsHooks < Spree::ThemeSupport::HookListener
   #
 
 end
+

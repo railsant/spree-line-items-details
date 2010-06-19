@@ -1,0 +1,9 @@
+<% fields_for :details do |field| %>
+  <p class="prices">Product Details</p>
+  <% @product.option_types.each do |option_type| %>
+    <%= field.label option_type.presentation %>
+    <%= field.select option_type.presentation.downcase, option_type.option_values.collect(&:presentation) %>
+    <br />
+  <% end %>
+<% end %>
+
